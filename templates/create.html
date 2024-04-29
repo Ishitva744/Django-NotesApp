@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} Create {% endblock %}
+{% block content %}
+
+	
+
+	{% for message in messages %}
+	<div class = "alert {{ message.tags }} alert-dismissible fade show" role = "alert">
+		<strong>Message:  </strong>{{ message }}
+		<button type = "button" class = "close" data-dismiss="alert" aria-label='Close'>
+			<span aria-hidden = "true"> &times; </span>
+		</button>
+	</div>
+	{% endfor %}
+
+	<div class='container pt-5'>
+		<h2>Create a new note </h2>
+		<form action = '/mynotes/create' method = 'POST'>
+			{% csrf_token %}
+			<div class = 'form-group'>
+			<label for = "title"> Title </label>
+			<input type="text" name="title" placeholder="Title"  class = 'form-control' required>
+			</div>
+
+			<div class = 'form-group'>
+			<label for = "text">Text</label>
+			<input type="text" name="text" placeholder="Enter Text" class = 'form-control'>
+			</div>
+
+
+			<button type = 'submit' class = 'btn btn-primary'> Create </button>
+			
+		</form>
+	</div>
+	<p class="lead text-center">Check your notes by clicking <a href = '/mynotes'> here </a>
+
+{% endblock %}

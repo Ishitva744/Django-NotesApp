@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block title %} 
+	My Notes
+{%  endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+	{% for message in messages %}
+	<div class = "alert {{message.tags}} alert-dismissible fade show" role = "alert">
+		<strong>Message:  </strong>{{ message }}
+		<button type = "button" class = "close" data-dismiss="alert" aria-label='Close'>
+			<span aria-hidden = "true"> &times; </span>
+		</button>
+	</div>
+	{% endfor %}
+
+
+	<div class = 'container pt-5'>
+		<h2> My Notes </h2>
+		<hr>
+		{% for item in note %}
+		<ul class = 'list-group'>
+			
+				<li class = 'list-group-item'><h5>{{item.title}}</h5>  <p class = 'text-right'><a href = '/mynotes/update/{{ item.id }}' class = 'btn btn-warning'> Update </a> <a href = '/mynotes/delete/{{ item.id }}' class = 'btn btn-danger'> Delete </a> </p>
+					<hr>{{item.text}} 
+				</li>
+				<br>
+			
+		</ul>
+		{% endfor %}
+		<p class = 'lead'><a href = "/mynotes/create"> Add New Note </a></p>
+		<p class = 'lead'><a href = "/"> Homepage </a></p>
+		<a href= '/auth/signout' class = 'btn btn-danger'> Signout </a>
+	</div>
+	
+	
+	
+	{% else %}
+<p class="lead text-center">
+		Click <a href = '/auth/signin'> here </a> to sign in.
+	</p>
+{% endif %}
+{% endblock %} 

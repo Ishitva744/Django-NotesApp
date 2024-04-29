@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+	HomePage
+{% endblock %}
+
+{% block content %}
+	{% for message in messages %}
+		<div class = "alert {{ message.tags }} alert-dismissible fade show" role = "alert">
+			{{ message }}
+			<button type = 'button' class = 'close' data-dismiss="alert" aria-label='Close'>
+				<span aria-hidden = "true"> &times; </span>
+			</button>
+		</div>
+	{% endfor %}
+
+	<div class = 'container pt-5'>
+		<h1>Notes App</h1><br>
+		<div class = 'position-absolute'>
+			
+			<h3>Welcome to MyNotes</h3>
+
+			{% if user.is_authenticated %}
+				<h4>Hello {{ request.user.first_name }} </h4>
+				<h6>You are successfully logged in!</h6><br>
+				<p class='lead'>
+					Click <a href = '/mynotes'> here </a> to check your notes
+				</p>
+				<a href= '/auth/signout' class='btn btn-danger'> Signout </a>
+			{% else %}
+			<p class="lead text-center">
+				Click <a href = '/auth/signin'> here </a> to sign in.
+			</p>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
