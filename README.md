@@ -13,7 +13,7 @@ A simple notes app built using Django framework with login functionality and CRU
 
 ## Languages and Frameworks Used
 - [Python](https://www.python.org/doc/)
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)/[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) / [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
 - [Django](https://www.djangoproject.com)
 - [Bootstrap -v4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
@@ -27,7 +27,7 @@ git clone https://github.com/Ishitva744/Django-NotesApp.git
 
 
 > ### For Windows
-2. Use package manager [pip](https://pip.pypa.io/en/stable/) to install Django. (You should create a [virtual environment](https://docs.python.org/3/library/venv.html) first if you want.)
+2. Use package manager [pip](https://pip.pypa.io/en/stable/) to install Django. _(You should create a [virtual environment](https://docs.python.org/3/library/venv.html) first if you want.)_
 ```
 pip install django
 ```
