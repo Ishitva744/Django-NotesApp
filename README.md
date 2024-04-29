@@ -1,4 +1,4 @@
-[# Django-NotesApp
+# Django-NotesApp
 
 ![GitHub](https://img.shields.io/github/license/Ishitva744/Django-NotesApp)
 
@@ -11,6 +11,11 @@ A simple notes app built using Django framework with login functionality and CRU
 - Add, delete, and update notes functionality.
 - Responsive design using CSS and Bootstrap.
 
+## Languages and Frameworks Used
+- [Python](https://www.python.org/doc/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)/[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
+- [Django](https://www.djangoproject.com)
+- [Bootstrap -v4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
 ## Installation
 
@@ -19,27 +24,37 @@ A simple notes app built using Django framework with login functionality and CRU
 ```bash
 git clone https://github.com/Ishitva744/Django-NotesApp.git
 ```
-2. Use package manager [pip](https://pip.pypa.io/en/stable/) to install  django. (You should create a virtual environment first if you want.) 
-```console
-   pip install django
-```
 
-4. Apply Migrations
+
+> ### For Windows
+2. Use package manager [pip](https://pip.pypa.io/en/stable/) to install Django. (You should create a [virtual environment](https://docs.python.org/3/library/venv.html) first if you want.)
+```
+pip install django
+```
+3. Apply Migrations
 ```
 python manage.py migrate
 ```
-5. Run the development server
+4. Run the development server
 ```
 python manage.py runserver
 ```
-6. Access the application at http://localhost:8000 in your web browser.
+5. Access the application at http://localhost:8000 in your web browser.
+
+
+> [!NOTE] 
+> As this project uses  _bootstrap framework_, it requires an __internet connection__ to work. The app will run without any issues but the front-end layout will not work properly.
 
 
 ## Usage
+- _Register for a new account or login if you already have one._
+- _Once logged in, you can add, delete, and update your notes._
+- _Enjoy organizing your notes efficiently!_
 
-Register for a new account or login if you already have one.
-Once logged in, you can add, delete, and update your notes.
-Enjoy organizing your notes efficiently!
+## Future Improvements
+1. Improve the UI and make it more user-friendly.
+2. Update the bootstrap framework version.
+3. Include more functionality in the NotesApp.
 
 
 ## Contributing
@@ -48,16 +63,15 @@ to discuss what you would like to change.
 
 If you'd like to contribute to this project, please follow these steps:
 
-Fork the repository.
-Create a new branch (git checkout -b feature)
-Make your changes.
-Commit your changes (git commit -am 'Add feature')
-Push to the branch (git push origin feature)
-Create a new Pull Request.
+- Fork the repository.
+- Create a new branch (git checkout -b feature)
+- Make your changes.
+- Commit your changes (git commit -am 'Add feature')
+- Push to the branch (git push origin feature)
+- Create a new Pull Request.
 
 
 ## License
 This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
 
 
-](https://developer.mozilla.org/en-US/docs/Web/CSS)
