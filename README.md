@@ -22,7 +22,7 @@ A simple notes app built using Django framework with login functionality and CRU
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Ishitva744/Django-NotesApp.git
+git clone https://github.com/<your-github-username>/Django-NotesApp.git
 ```
 
 
